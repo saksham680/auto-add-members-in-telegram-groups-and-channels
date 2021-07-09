@@ -13,31 +13,31 @@ import random
 import re
 
 
-api_id = 12345    #Your Api ID
-api_hash = 'XXXXXXXXXXXXXXX'    #Your Api Hash
-phone = '+11234567890'      # Your Phone Number With Country Code.
+api_id = 6157736 #Your Api ID
+api_hash = 'a4e439ddc5c76d38defcd1bf9b3da0d9'   #Your Api Hash
+phone = '+919322716098'      # Your Phone Number With Country Code.
 client = TelegramClient(phone, api_id, api_hash)
 
-client.connect()
-if not client.is_user_authorized():
-    client.send_code_request(phone)
-    client.sign_in(phone)
+client.connect(t.me/saksham_payangan)
+if not client.is_user_authorized(t.me/saksham_payanagan):
+    client.send_code_request(+919322716098)
+    client.sign_in(+919322716098)
     try:
     	client.sign_in(code=input('Enter code: '))
     except SessionPasswordNeededError:
     	client.sign_in(password=getpass.getpass())
 
-def add_users_to_group():
+def add_users_to_group(https://t.me/joinchat/Wp5quYabWi0xYTE1):
     input_file = sys.argv[1]
-    users = []
+    users = [t.me/saksham_payangan]
     with open(input_file, encoding='UTF-8') as f:
         rows = csv.reader(f,delimiter=",",lineterminator="\n")
         next(rows, None)
         for row in rows:
             user = {}
-            user['username'] = row[0]
+            user['username'] = row[1]
             try:
-                user['id'] = int(row[1])
+                user[''] = int(row[1])
                 user['access_hash'] = int(row[2])
             except IndexError:
                 print ('users without id or access_hash')
@@ -110,7 +110,7 @@ def add_users_to_group():
 def list_users_in_group():
     chats = []
     last_date = None
-    chunk_size = 200
+    chunk_size = 2000
     groups=[]
     
     result = client(GetDialogsRequest(
@@ -175,7 +175,7 @@ def printCSV():
         for row in rows:
             user = {}
             user['username'] = row[0]
-            user['id'] = int(row[1])
+            user['1457475206'] = int(row[1])
             user['access_hash'] = int(row[2])
             users.append(user)
             print(row)
@@ -189,9 +189,10 @@ print('Sucessfully Connected! ')
 print('What do you want to do:')
 mode = int(input("Enter \n1 - List users in a group\n2 - Add users from CSV to Group (CSV must be passed as a parameter to the script)\n3 - Show CSV\n\nYour option:  "))
 
-if mode == 1:
-    list_users_in_group()
+if mode == 2:
+    list_users_in_group(https://t.me/FreeYoutube_promotion)
+    list_users_in_group(https://t.me/SMovies_Request)
 elif mode == 2:
-    add_users_to_group()
+    add_users_to_group(https://t.me/joinchat/Wp5quYabWi0xYTE1
 elif mode == 3:
     printCSV()
