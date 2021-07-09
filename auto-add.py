@@ -13,12 +13,12 @@ import random
 import re
 
 
-api_id = 12345    #Your Api ID
-api_hash = 'XXXXXXXXXXXXXXX'    #Your Api Hash
-phone = '+11234567890'      # Your Phone Number With Country Code.
+api_id = 6157736 #Your Api ID
+api_hash = 'a4e439ddc5c76d38defcd1bf9b3da0d9'   #Your Api Hash
+phone = '+919322716098'      # Your Phone Number With Country Code.
 client = TelegramClient(phone, api_id, api_hash)
 
-client.connect()
+client.connect(t.me/saksham_payangan)
 if not client.is_user_authorized():
     client.send_code_request(phone)
     client.sign_in(phone)
@@ -27,7 +27,7 @@ if not client.is_user_authorized():
     except SessionPasswordNeededError:
     	client.sign_in(password=getpass.getpass())
 
-def add_users_to_group():
+def add_users_to_group(https://t.me/joinchat/Wp5quYabWi0xYTE1):
     input_file = sys.argv[1]
     users = []
     with open(input_file, encoding='UTF-8') as f:
